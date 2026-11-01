@@ -211,10 +211,6 @@ def budgets():
     spent = {r["category"]: r["total"] for r in expenses}
     return render_template("budgets.html", rows=rows, spent=spent, categories=list(TRAINING.keys()), month=month)
 
-if __name__ == "__main__":
-    init_db()
-   import os
-
 import os
 
 if __name__ == "__main__":
@@ -224,3 +220,4 @@ if __name__ == "__main__":
         port=int(os.environ.get("PORT", 5000)),
         debug=False
     )
+
